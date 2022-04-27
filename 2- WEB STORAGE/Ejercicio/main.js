@@ -2,8 +2,12 @@
 // 1.creamos el boton para llamar la funcion
 const submitButton = document.querySelector("#submit");
 console.log(submitButton);
+const clearButton = document.querySelector("#reset");
+console.log(clearButton);
+
 // 2.creamos el evento del boton que llama la funcion
 submitButton.addEventListener("click", getUser);
+clearButton.addEventListener("click",deteleAllUsers);
 
 // 3.creamos el array donde guardaremos la info
 let users =[]
@@ -22,6 +26,7 @@ function getUser(item) {
     email: getEmail,
     message: getMessage,
   };
+
   console.log(userData)
 
   // 7.pushea en el array los valores del objeto
@@ -33,7 +38,9 @@ function getUser(item) {
 console.log(infoUser)
 }
 
-// let infoUser = JSON.parse(localStorage.getItem("stringUsers",users))
-// console.log(infoUser)
+// 10. Funcion borrar usuarios.
+//  esto me esta borrando el localStorage, pero al añadir otro recupera la parte anterior, no se reinicia
 
-// let tripulacion = JSON.parse(localStorage.getItem("piratas"))
+function deteleAllUsers(){
+    localStorage.clear()
+}
