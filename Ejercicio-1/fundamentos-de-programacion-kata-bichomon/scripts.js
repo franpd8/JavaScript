@@ -1,5 +1,6 @@
 console.log(document.title);
 
+
 let noClick = document.querySelector("HTML");
 function anularClick(algo) {
   algo.preventDefault();
@@ -8,6 +9,12 @@ noClick.addEventListener("click", anularClick);
 
 // let pkm = document.querySelectorAll('.infocard')
 // console.log(pkm)
+
+
+// .nextElementSibling buscar más tarde:
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling
+
+
 
 // 1.Cambia el título "Generation 1 Pokémon" por "Generasión 1 Pokimon".
 let title1 = document.getElementById('gen-1')
@@ -132,7 +139,7 @@ for (let i =0; i <imagenesPkm.length;i++){
 
 // 7. Cambia el fondo de todos los infocard-lg-data text-muted para todos los Pokimon voladores itype flying
 
-let voladores = document.querySelectorAll(".infocard-lg-data.text-muted .itype.flying")
+let voladores = document.querySelectorAll(".itype.flying")
 console.log(voladores)
 
 for (let volador of voladores){
