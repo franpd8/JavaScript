@@ -18,16 +18,16 @@ console.log(users,"arr usuarios inicial")
 function getUser(item) {
     item.preventDefault()
   // 5.recoger datos de los inputs del formulario
-  let getName = document.querySelector("#name").value
-  let getEmail = document.querySelector("#email").value
-  let getMessage = document.querySelector("#message").value
+  let getName = document.querySelector("#name")
+  let getEmail = document.querySelector("#email")
+  let getMessage = document.querySelector("#message")
   console.log(getName, getEmail, getMessage);
 
   // 6.creamos el objeto donde se guardará la info del formulario
   let userData = {
-    name: getName,
-    email: getEmail,
-    message: getMessage,
+    name: getName.value,
+    email: getEmail.value,
+    message: getMessage.value,
   };
 
   console.log(userData," obj nuevo usuario")
