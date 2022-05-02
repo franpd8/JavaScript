@@ -42,7 +42,6 @@ function onSubmit(e) {
     console.log("success");
     
     }
-    
     }
 // myForm addEventListener()
 

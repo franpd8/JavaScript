@@ -44,8 +44,9 @@ userList.innerHTML = ``;
 
 function printUsers(){
   //   9.Muestra por consola la informacion del DOM
-  let infoUser = JSON.parse(localStorage.getItem("stringUsers",users));
+  let infoUser = JSON.parse(localStorage.getItem("stringUsers"))
 console.log(infoUser)
+console.log("bbiciletea")
 
 for(let i = 0; i < infoUser.length; i++){
 
