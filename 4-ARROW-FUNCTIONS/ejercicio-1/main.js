@@ -105,10 +105,7 @@ const numbers = [ 4, 5, 6, 7, 8, 9, 10];
 // Resultado esperado
 // [256, 3125, 46656, 823543, 16777216, 387420489, 10000000000]
 
-const numbersElevados = numbers.map( numero =>{
-
-  return numero**numero
-} )
+const numbersElevados = numbers.map(numero => numero**numero)
 
 console.log(numbersElevados)
 
@@ -184,6 +181,16 @@ const veggie = foodList2.filter(comida =>(comida.isVeggie == true)).map(comidaVe
 })
 console.log(veggie)
 
+// version usando indices en lugar de nombres => Revisar Mike & Rebeca & Vicent
+
+// const veggie2 = foodList2.filter(comida =>(comida.isVeggie == true)).map(comida,indice => {
+//   if(indice == 1){
+//     return `Que rica Tofu burguer me voy a comer!`
+//   } else {
+//     return  `Que rico Tempeh me voy a comer!`}
+// })
+// console.log(veggie2)
+
 console.log("5. Reduce")
 
 // Dado el siguiente array, obtén la multiplicación de todos los elementos del array:
@@ -247,6 +254,13 @@ const staff = [
     })
 
     console.log(guessWho)
+
+    // update en una linea, version más limpia.
+    const guessWho2 = staff.map(persona => {
+        return `${persona.name} es ${persona.role} y le gusta ${persona.hobbies[0]}  y ${persona.hobbies[1]}`
+    })
+
+    console.log(guessWho2)
 
     console.log("Extras: Filter")
 // Dado el siguiente array, devolver un array con los nombres de los elementos que valgan más de 300 euros
