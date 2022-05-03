@@ -95,6 +95,14 @@ gente.forEach(persona=>{
   if(persona.nombre.startsWith('J')){
     console.log(persona)
   }
+
+// const empiezaPorJ = []
+// gente.forEach(persona => {
+//   if (persona.nombre.substring(0, 1) == "J") {
+//       empiezaPorJ.push(persona)
+//   }
+// })
+
 })
 // la diferencia es que aqui muestro por consola directamente y no lo guardo en ningun array como hice en el ejemplo de arriba
 
