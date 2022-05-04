@@ -38,19 +38,22 @@ console.log("El email de Luis es:", email)
 // } 
 // invertirValor()
 
-// ---------Version Sencilla
-// array original
-let a = 5
-let b = 3
-const array = [a,b]
-console.log(array)
-// desestucturacion
-const [inicial,final] = array
-// nuevo array
-const arrayInvertido = [final,inicial]
-console.log(arrayInvertido)
+// // ---------Version Sencilla
+// // array original
+// let a = 5
+// let b = 3
+// const array = [a,b]
+// console.log(array)
+// // desestucturacion
+// const [inicial,final] = array
+// // nuevo array
+// const arrayInvertido = [final,inicial]
+// console.log(arrayInvertido)
 
-
+// Sería la forma correcta, que reasigna los valores, lo de antes solo reordena pero a sigue valiendo 5.
+// [a,b] = [b,a]
+// console.log(a)
+// console.log(b)
 
 
 
@@ -166,12 +169,33 @@ const HIGH_TEMPERATURES = {
 
     const sinRepetir = new Set(todos)
     const sinRepetir2 = Array.from(sinRepetir);
-
     return sinRepetir2 
  }
  const unicos2 = onlyUniques2('gato', 'pollo', 'cerdo', 'cerdo');
  console.log(unicos2)
 
+//  otra otra version 
+const onlyUniques3 = (...todos) => {
+  let unico = [...new Set(todos)];
+  // al meterlo en un array directamente lo transforma
+  return unico
+};
+
+const unicos3 =onlyUniques("gato", "pollo", "cerdo", "cerdo");
+console.log(unicos3)
+
+// otra otra version , recoriendo el array y añadiendo solo valores que NO esten ya incluidos
+
+const onlyUniques4 = (...data) =>{
+  let vacia = []
+  data.forEach(value => {
+if (!vacia.includes(value)){
+    vacia.push(value)
+    // vacia = [...vacia, value]
+}
+})
+return vacia
+}
 
 //  Escriba una función llamada combineAllArrays que pueda recibir cualquier cantidad de arrays como argumentos y los combine todos en un solo array.
 // https://stackoverflow.com/questions/5080028/what-is-the-most-efficient-way-to-concatenate-n-arrays
@@ -191,24 +215,41 @@ const combineAllArrays = (...arrays) => {
 const todosArrays = combineAllArrays([2, 7, 3, 1],[2, 7, 4, 12],[2, 44, 22, 7, 3, 1])
 console.log(todosArrays)
 
+// como lo hace Ger sería
+
+const combineAllArrays2 = (...arrays) => {
+
+  return arrays.reduce((a,b)=> [...a,...b])
+}
+const todosArrays2 = combineAllArrays2([2, 7, 3, 1],[2, 7, 4, 12],[2, 44, 22, 7, 3, 1])
+console.log(todosArrays2)
 
 
 // Escriba una función llamada sumAndSquare que reciba cualquier número de argumentos, los eleve al cuadrado y devuelva la suma de todos los valores cuadrados.
 
 
-const sumAndSquare = (...numeritos) =>{
-    // console.log(numeritos)
-    // const todos = numeritos.flat()
-    // console.log(todos)
-    console.log(numeritos)
-    const num2 = numeritos.map(numerito=> numerito*numerito)
-    console.log(num2)
-    // todos.forEach(numeros => Math.pow(numeros,2))
-    console.log(todos)
+// const sumAndSquare = (...numeritos) =>{
+//     // console.log(numeritos)
+//     // const todos = numeritos.flat()
+//     // console.log(todos)
+//     console.log(numeritos)
+//     const num2 = numeritos.map(numerito=> numerito*numerito)
+//     console.log(num2)
+//     // todos.forEach(numeros => Math.pow(numeros,2))
+//     console.log(todos)
 
-}
+// }
 
 
 
-const valoresCuadrados = sumAndSquare(1,2,3)
-console.log(valoresCuadrados)
+// const valoresCuadrados = sumAndSquare(1,2,3)
+// console.log(valoresCuadrados)
+
+// Este lo ha hecho David :) 
+
+const SumAndSquare = (...numbers) => {
+  return numbers.reduce((sum, number) => {
+    return sum + Math.pow(number, 2);
+  }, 0);
+};
+console.log(SumAndSquare(5, 5, 5));
