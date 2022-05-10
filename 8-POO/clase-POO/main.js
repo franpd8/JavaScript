@@ -109,7 +109,7 @@ class Gato {
 
 const pascual = new Gato("pokemon", "Pascual", "azul", "gordo", "arañazo");
 console.log(pascual);
-// console.log(pascual.acciones());
+ console.log(pascual.acciones());
 
 //otra forma de crear el constructor
 function Libro(titulo, autor, año) {
@@ -155,27 +155,27 @@ console.log(mag1);
 
 //   let miFurgon = new Furgon("Peugeot", "607", 2002, "rojo", "turismo",1200, 768, 4.5);
 
-class Coche {
-  static info(edad) {
-    console.info(
-      `Tienes ${edad} años ${
-        edad >= 18
-          ? "y puedes conducir"
-          : "y ... ¡Sorry! Sigue esperando para conducir."
-      }`
-    );
-  }
-  // constructor(marca, modelo, antiguedad, color, tipo) {
-  //   this.marca = marca;
-  //   this.modelo = modelo;
-  //   this.antiguedad = antiguedad;
-  //   this.color = color;
-  //   this.tipo = tipo;
-  // }
-  // detalles() {
-  //   console.log(`Tu coche es un ${this.marca} ${this.modelo} con ${this.antiguedad} años, clase ${this.tipo} y color ${this.color}`);
-  // }
-}
-Coche.info(50);
-Coche.info(8);
+// class Coche {
+//   static info(edad) {
+//     console.info(
+//       `Tienes ${edad} años ${
+//         edad >= 18
+//           ? "y puedes conducir"
+//           : "y ... ¡Sorry! Sigue esperando para conducir."
+//       }`
+//     );
+//   }
+//   // constructor(marca, modelo, antiguedad, color, tipo) {
+//   //   this.marca = marca;
+//   //   this.modelo = modelo;
+//   //   this.antiguedad = antiguedad;
+//   //   this.color = color;
+//   //   this.tipo = tipo;
+//   // }
+//   // detalles() {
+//   //   console.log(`Tu coche es un ${this.marca} ${this.modelo} con ${this.antiguedad} años, clase ${this.tipo} y color ${this.color}`);
+//   // }
+// }
+// Coche.info(50);
+// Coche.info(8);
 //   let miCoche = new Coche("Peugeot", "607", 2002, "rojo", "turismo");

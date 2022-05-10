@@ -57,4 +57,50 @@ let Kureha = new Profesor ("Kureha","63 años", "mujer", "Medicina", "Avanzada")
 
 Kureha.asignar()
 
-console.log("----------Ejercicios Kata Aztecas/Mayas-----------")
+console.log("----------Kata Aztecas/Mayas-----------")
+
+class Warrior {
+
+    constructor(life,power){
+        this.life = life,
+        this.power = power
+    }
+
+    attack (){
+        console.log(this.power)
+        return this.power
+    }
+    defend(damage){
+        let hp = this.life - damage
+        console.log(hp)
+
+    }
+}
+
+let warrior1 = new Warrior (100,40)
+console.log(warrior1)
+warrior1.attack()
+
+class Maya extends Warrior {
+    constructor (life,power){
+        super (life,power)
+    }
+    drinkColaCao(){
+        this.power = this.power + 10
+        console.log(this.power)
+    }
+}
+
+let Maya1 = new Maya(100,40)
+console.log(Maya1)
+Maya1.drinkColaCao()
+
+class Aztec extends Warrior{
+    constructor(life,power){
+        super(life,power)
+    }
+    drinkNesquick(){
+        this.life = this.life +10
+        console.log(this.life)
+    }
+}
