@@ -29,6 +29,32 @@ class Estudiante extends Persona {
         this.curso = curso,
         this.grupo  = grupo
     }
-
+    registrar(){
+        console.log(`Hola soy ${this.nombre}, tengo ${this.edad} y soy ${this.genero}. Además, estoy en ${this.curso} y voy al grupo ${this.grupo}`)
+    }
 }
 
+console.log(Estudiante)
+let chopper = new Estudiante ("Chopper","8 años", "reno", "2º", "B")
+
+chopper.registrar()
+// --------------------------------------------------------------------------
+// Crear la clase Profesor, que hereda de Persona, e incluye las propiedades asignatura y nivel y el método asignar(), que muestre por pantalla el resultado.
+
+class Profesor extends Persona{
+    constructor (nombre,edad, genero,asignatura,nivel){
+        super(nombre, edad, genero)
+        this.asignatura = asignatura,
+        this.nivel  = nivel
+    }
+    asignar(){
+        console.log(`Hola soy ${this.nombre}, tengo ${this.edad} y soy ${this.genero}. Además, enseño ${this.asignatura} ${this.nivel}`)
+    }
+}
+
+console.log(Profesor)
+let Kureha = new Profesor ("Kureha","63 años", "mujer", "Medicina", "Avanzada")
+
+Kureha.asignar()
+
+console.log("----------Ejercicios Kata Aztecas/Mayas-----------")
