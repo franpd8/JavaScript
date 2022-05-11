@@ -67,9 +67,9 @@ const mostrarNombres =(perros) =>{
 
 
 const buscarPerrosLista= (perro) =>{
-  console.log("he hecho click en ",perro)
+  // console.log("he hecho click en ",perro)
 let searchUrl = API_URL + perro + "/images";
-console.log("estoy buscando a:", searchUrl)
+// console.log("estoy buscando a:", searchUrl)
 axios
     .get(searchUrl)
     .then((res) => {
