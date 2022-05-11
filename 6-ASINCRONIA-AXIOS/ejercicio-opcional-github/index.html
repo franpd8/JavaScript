@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio Github</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row" style="height:100vh;" >
+      <div class="col-sm-6 d-flex  mx-auto my-auto">
+        <div  class="container align-self-center" id="container" style="width: 40rem">
+          <div class="form-group pt-5">
+            <h1>¡Espía a alguien!</h1>
+          </div>
+          <form id="form" class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="buscar"
+              placeholder="id de GitHub"
+            />
+            <input
+              type="button"
+              id ="example"
+              value ="buscar"
+              class="btn btn-warning mt-2"
+            />
+          </form>
+        </div>
+        <div class="card mx-auto invisible" style="width: 40rem" id="perfil">
+          <img src="./assets/perfil.png" class="card-img-top mx-auto mt-3" style="width:50%;height:auto;border-radius:100%" id="pic" />
+          <div class="card-body text-center">
+            <h5 class="card-title pb-2" id="nombre">Nombre usuario</h5>
+    <!-- https://stackoverflow.com/questions/4365246/how-to-change-href-of-a-tag-on-button-click-through-javascript -->
+            <a href="#" id="enlace" class="btn btn-success"><span id="repo">Ver 234 repositorios</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
