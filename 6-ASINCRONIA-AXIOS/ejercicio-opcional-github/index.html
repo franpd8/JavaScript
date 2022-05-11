@@ -15,35 +15,36 @@
   <body>
     <div class="row" style="height:100vh;" >
       <div class="col-sm-6 d-flex  mx-auto my-auto">
-        <div  class="container align-self-center" id="container" style="width: 40rem">
+        <div class="container align-self-center" id="container" style="width: 40rem">
           <div class="form-group pt-5">
-            <h1>¡Espía a alguien!</h1>
+            <h1>Spy on someone</h1>
           </div>
           <form id="form" class="form-group">
             <input
               type="text"
               class="form-control"
-              id="buscar"
+              id="search"
               placeholder="id de GitHub"
             />
             <input
               type="button"
-              id ="example"
-              value ="buscar"
+              id ="btn"
+              value ="search"
               class="btn btn-warning mt-2"
             />
           </form>
         </div>
-        <div class="card mx-auto invisible" style="width: 40rem" id="perfil">
+        <div class="card mx-auto invisible" style="width: 40rem" id="profile">
           <img src="./assets/perfil.png" class="card-img-top mx-auto mt-3" style="width:50%;height:auto;border-radius:100%" id="pic" />
           <div class="card-body text-center">
-            <h5 class="card-title pb-2" id="nombre">Nombre usuario</h5>
+            <h5 class="card-title pb-2" id="username">Username</h5>
     <!-- https://stackoverflow.com/questions/4365246/how-to-change-href-of-a-tag-on-button-click-through-javascript -->
-            <a href="#" id="enlace" class="btn btn-success"><span id="repo">Ver 234 repositorios</span></a>
+            <a href="#" id="link" class="btn btn-success"><span id="repo">See 234 repositories</span></a>
           </div>
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
