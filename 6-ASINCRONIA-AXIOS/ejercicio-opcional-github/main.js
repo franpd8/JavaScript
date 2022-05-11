@@ -48,6 +48,9 @@ const searchUser = (e) => {
         printUrl(html_url)
         showUser()
       })
+
+
+    //   modificar catch para hacer algo al encontrar error 404
       .catch((err) => printLogin(no_encontrado));
   };
 
