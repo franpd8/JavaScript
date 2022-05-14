@@ -10,6 +10,7 @@ const repo = document.getElementById("repo")
 const btn = document.getElementById("btn")
 const API_URL = " https://api.github.com/users/";
 
+const imagen404 = "./assets/404.png"
 
 
 
@@ -29,6 +30,14 @@ repo.innerText = `${repos} repositories`
 printUrl = (url) =>{
 link.href= url 
 }
+
+printError = () =>{
+    printPicture(imagen404)
+    printLogin("User not Found")
+    printRepo("Sorry")
+    printUrl()
+
+}
 const searchUser = (e) => {
     e.preventDefault();
     let user = search.value;
@@ -39,8 +48,8 @@ const searchUser = (e) => {
       .get(userUrl)
       .then((res) => {
         const {public_repos, login, avatar_url,html_url } = res.data
-        console.log(res.data)
-        console.log(public_repos, login, avatar_url,html_url)
+        // console.log(res.data)
+        // console.log(public_repos, login, avatar_url,html_url)
         
         printPicture(avatar_url)
         printLogin(login)
@@ -49,9 +58,11 @@ const searchUser = (e) => {
         showUser()
       })
 
-
-    //   modificar catch para hacer algo al encontrar error 404
-      .catch((err) => printLogin(no_encontrado));
+      .catch((err) => {
+        console.error(err)
+        printError()
+      } 
+      );
   };
 
 
