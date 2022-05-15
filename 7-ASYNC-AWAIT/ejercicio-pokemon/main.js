@@ -36,18 +36,86 @@ printType = (pkmTypesData)=>{
     // develop a switch for next version
     if(pkmType.type.name == 'fire' ){
       type.innerHTML += `
-      <div class="btn btn-danger"> 
+      <div id="fire" class="btn btn-light"> 
       ${pkmType.type.name} 
       </div>`
-    }else{
+    }  else if(pkmType.type.name == 'normal') {
       type.innerHTML += `
-      <div class="btn btn-success"> 
+      <div id="normal" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    } else if(pkmType.type.name == 'grass') {
+      type.innerHTML += `
+      <div id="grass" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    } else if (pkmType.type.name == 'water'){
+      type.innerHTML += `
+      <div id="water" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'electric'){
+      type.innerHTML += `
+      <div id="electric" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    } 
+    else if (pkmType.type.name == 'fighting'){
+      type.innerHTML += `
+      <div id="fighting" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'ice'){
+      type.innerHTML += `
+      <div id="ice" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'poison'){
+      type.innerHTML += `
+      <div id="poison" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'ground'){
+      type.innerHTML += `
+      <div id="ground" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'rock'){
+      type.innerHTML += `
+      <div id="rock" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'dark'){
+      type.innerHTML += `
+      <div id="dark" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'steel'){
+      type.innerHTML += `
+      <div id="steel" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'dragon'){
+      type.innerHTML += `
+      <div id="dragon" class="btn btn-light"> 
+      ${pkmType.type.name} 
+      </div>`
+    }
+    else if (pkmType.type.name == 'fairy'){
+      type.innerHTML += `
+      <div id="fairy" class="btn btn-light"> 
       ${pkmType.type.name} 
       </div>`
     }
   })
-
-
 }
 
 
