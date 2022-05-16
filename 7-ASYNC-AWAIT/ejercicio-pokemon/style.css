@@ -14,7 +14,7 @@
   --rock-bg: #b8a038;
   --ghost-bg: #6f5898;
   --dark-bg: #705848;
-  --dragon-bg: #7139f8;
+  --dragon-bg: rgb(113, 57, 248);
   --steel-bg: #b8b8d0;
   --fairy-bg: #f0b5bc;
 }
@@ -88,4 +88,8 @@
     color: #fff;
   }
 
+  #psychic{
+    background-color:var(--psychic-bg);
+    color:#fff;
+  }
 
